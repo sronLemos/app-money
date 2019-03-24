@@ -24,5 +24,4 @@ export class LancamentosPesquisaComponent  {
       dataPagamento: null, valor: 180, pessoa: 'Academia Top' }
   ];
 
-
 }
