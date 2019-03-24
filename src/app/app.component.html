@@ -26,7 +26,7 @@
 
   <div class="ui-g">
     <div class="ui-g-12">
-      <p-table [value]="lancamentos">
+      <p-table [value]="lancamentos" [paginator]="true" [rows]="2">
         <ng-template pTemplate="header">
           <tr>
               <th>Pessoa</th>
@@ -48,11 +48,9 @@
                 {{lancamento.valor}}
               </span>
             </td>
-            <td>
-              <div [ngStyle]="{display: 'inline-flex'}">
-                <a pButton icon="pi pi-pencil"></a>
-                <button pButton icon="pi pi-trash"></button>
-              </div>
+            <td [ngStyle]="{display: 'inline-flex'}">
+              <a pButton icon="pi pi-pencil" pTooltip="Editar" tooltipPosition="top"></a>
+              <button pButton icon="pi pi-trash" pTooltip="Excluir" tooltipPosition="top"></button>
             </td>
           </tr>
         </ng-template>
